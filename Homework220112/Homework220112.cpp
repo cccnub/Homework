@@ -5,48 +5,24 @@
 
 int main()
 {
-	int Arr[10] = {};
+	int Arr[10] = { 0 };
+	int index = 0;
 
-	//홀수배열
+	int A = 1;
 
-	int Arr2[10] = {};
+	for (index = 0; 
+		index < 10; 
+		index +=1)
+	{ 
+		Arr[index] = A;
 
-    //짝수배열
+		A += 2;
 
- 
-
-	int Index = 0; 
-    
-	int B = 1;
-
-	
-	
-	
-	//반복문, A가 10이 될 경우 종료  
-	
-	while (Index<10)
-	{
-
-		Arr[Index] = B;
-
-		Arr2[Index] = B + 1;
-	
-	
-	
-		Index += 1;
-		// 배열 index + 1
-
-		B += 2;
-		// 값에 + 2
-
-	
-
-		
-
-		
 	}
 
 		
+	//2부터 시작해서 배열이 가득찰때 까지 짝수로만 채워라
+
 	
 
 		
