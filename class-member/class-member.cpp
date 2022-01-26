@@ -34,6 +34,7 @@
 
 class blade
 {
+public:
 	//변수를 선언할 수 있으며 멤버변수 라고 한다. 
 	//멤버변수를 상태라고 부른다.
 	
@@ -56,16 +57,30 @@ class blade
 	}
 };
 
+class DDD
+{
+public:
+	DDD() {}
+	~DDD() {}
+
+	void TEST(blade& RefA, int xsd)
+	{
+		RefA.Hp = 500;
+	}
+
+	void TEST(blade* ValA) 
+	{
+		ValA->Hp = 1000;
+	}
+};
 
 int main()
 {
 	blade Blade = blade();
+	Blade.Damage(5000);
 
-	
-
-	
-
-
-	
+	DDD AAA = DDD();
+	AAA.TEST(Blade, 10);
+	AAA.TEST(&Blade);
 }
 

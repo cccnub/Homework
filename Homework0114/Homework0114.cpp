@@ -6,35 +6,33 @@
 
 void ToUpper(const char* _Left, char* _Right)
 {
-	int Count = 0;
+	int nSize = strlen(_Left);
 
-	for (int i = 0; i < 100; i += 1)
+	for (int i = 0; i < nSize; i++)
 	{
-
-		if (0 != _Left[i])
+ 		if ('\0' != _Left[i])
 		{
-         	if ('a' <= _Left[Count] && 'z' >= _Left[Count])
+			if ('a' <= _Left[i] && 'z' >= _Left[i])
 			{
 				_Right[i] = _Left[i] - ('a' - 'A');
-
-
 			}
-
 			else
-			{
-
-				return;
-			}
-
+				_Right[i] = _Left[i];
 		}
 	}
 }
 
+void ToUpper(const char* _Left)
+{
+	int rt = 0;
+}
+
 int main()
 {
-	char Text[100];
+	char Text[100] = {};
 
 	ToUpper("12abCcEee", Text);
+	ToUpper("12abCcEee");
 	//      "12ABCCEEE"
 	printf_s(Text);
 }
